@@ -76,5 +76,18 @@ namespace ApiCSherpas.Controllers
             return this.listaClientes;
 
         }
+        [HttpPut]
+        public List<Clientes> PutCliente(int id, string name, string surname, string email, DateTime birthday)
+        {
+            Clientes x = this.listaClientes.Find(z => z.Id == id);
+
+            x.Name = name;
+            x.Surname = surname;
+            x.Email = email;
+            x.Birthday = birthday;
+
+
+            return this.listaClientes;
+        }
     }
 }
