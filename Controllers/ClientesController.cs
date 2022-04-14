@@ -63,5 +63,18 @@ namespace ApiCSherpas.Controllers
             return this.listaClientes;
 
         }
+        [HttpPost]
+        public List<Clientes> PostCliente(string name, string surname, string email, DateTime birthday)
+
+        {
+            int Identificacion = listaClientes.Count + 1;
+
+            Clientes p = new Clientes { Id = Identificacion, Name = name, Surname = surname, Email = email, Birthday = birthday };
+
+            this.listaClientes.Add(p);
+
+            return this.listaClientes;
+
+        }
     }
 }
