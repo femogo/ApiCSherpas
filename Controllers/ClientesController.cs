@@ -51,5 +51,17 @@ namespace ApiCSherpas.Controllers
             return p;
 
         }
+        [HttpDelete("{Id}")]
+        public List<Clientes> DeleteCliente(int Id)
+
+        {
+
+            Clientes x = this.listaClientes.Find(z => z.Id == Id);
+
+            listaClientes.Remove(x);
+
+            return this.listaClientes;
+
+        }
     }
 }
