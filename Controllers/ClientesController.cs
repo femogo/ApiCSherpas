@@ -33,5 +33,13 @@ namespace ApiCSherpas.Controllers
             this.listaClientes.Add(p);
 
         }
+        [HttpGet]
+        public List<Clientes> GetClientes()
+
+        {
+
+            return this.listaClientes;
+
+        }
     }
 }
