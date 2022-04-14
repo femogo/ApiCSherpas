@@ -41,5 +41,15 @@ namespace ApiCSherpas.Controllers
             return this.listaClientes;
 
         }
+        [HttpGet("{Id}")]
+        public Clientes GetCliente(int Id)
+
+        {
+
+            Clientes p = this.listaClientes.Find(z => z.Id == Id);
+
+            return p;
+
+        }
     }
 }
